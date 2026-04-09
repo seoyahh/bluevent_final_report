@@ -3,278 +3,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>블루벤트 GEO 수정 완료 보고서</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>BLUEVENT GEO COMPLETION REPORT</title>
+    <meta name="description" content="AI 기반 검색 엔진 최적화(GEO) 및 테크니컬 개편 결과 성과 보고서">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .image-placeholder {
+            background:#f9fafb;
+            border: 2px dashed #d1d5db;
+            border-radius: var(--radius-lg);
+            padding: 4rem 1rem;
+            text-align: center;
+            color: var(--color-text-sub);
+            font-weight: 500;
+        }
+        .vs-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        <!-- Navigation Progress Bar -->
-        <div class="progress-container">
-            <div id="progress-bar" class="progress-bar"></div>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="badge" data-reveal>최종 완료 보고</div>
+                <h1 class="h1-hero" data-reveal style="margin-bottom: 2rem;">
+                    <span style="color: var(--color-primary);">BLUEVENT GEO</span> 개선 완료 보고서
+                </h1>
+                <p class="body-main text-gradient-subtle" data-reveal style="margin-top: 1rem;">As-Is 분석부터 To-Be 구조화, 그리고 정량적 성과 측정까지</p>
+            </div>
+        </section>
 
-        <!-- Slides Container -->
-        <div id="slides-container" class="slides-container">
-            <!-- Slide 1: Cover -->
-            <section class="slide active" id="slide-1">
-                <div class="content cover">
-                    <div class="badge">COMPLETION REPORT</div>
-                    <h1 class="main-title">블루벤트 GEO<br><span class="highlight">수정 완료 보고서</span></h1>
-                    <p class="subtitle">AI 기반 검색 엔진 최적화(GEO) 및 테크니컬 개편 결과 및 성과 분석</p>
-                    <div class="info-footer">
-                        <div class="info-item">
-                            <span class="label">DATE</span>
-                            <span class="value">2026. 04. 01</span>
+        <!-- 간지 01 -->
+        <section class="interstitial">
+            <div class="container" data-reveal>
+                <span class="chapter-num">NEXT CHAPTER</span>
+                <h2 class="h1-display">1. 프로젝트 개요</h2>
+                <p class="subtitle">블루벤트 GEO 현황 및 개선 방향 도출</p>
+            </div>
+        </section>
+
+        <!-- 1. 프로젝트 개요 내용 -->
+        <section id="overview">
+            <div class="container" data-reveal>
+                <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                    <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--color-text-sub); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">PROJECT OVERVIEW</span>
+                        <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">프로젝트 개요 — 배경 · 목표 · 대상</h3>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="align-items: stretch; margin-bottom: 1.5rem; gap: 1.5rem;">
+                    <!-- 배경 영역 -->
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-sub); font-weight: 600; margin-bottom: 0.5rem;">
+                            배경 · 왜 지금인가 
+                            <span style="display: inline-block; margin-left: 0.5rem; padding: 2px 6px; background: #faebeb; color: #d64040; border-radius: 4px; font-size: 0.7rem; font-weight: 700; vertical-align: middle;">AS-IS PROBLEM</span>
+                        </h4>
+                        
+                        <div style="border: 1px dashed rgba(214, 64, 64, 0.4); padding: 1.5rem; border-radius: var(--radius-lg); background: #fdfafa; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #d64040;"></div>
+                            <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: #d64040;">AI가 공식몰 대신 외부 출처를 인용</strong>
+                            <p style="color: #8c8c8c; line-height: 1.6; font-size: 0.95rem;">ChatGPT 등 AI 모델이 블루벤트 정보를 외부 기사·앱스토어에서 가져오는 경향. 공식몰이 직접 인용되지 못하는 구조적 원인이 존재.</p>
                         </div>
-                        <div class="info-item">
-                            <span class="label">CLIENT</span>
-                            <span class="value">BLUEVENT</span>
+                        
+                        <div style="border: 1px dashed rgba(214, 64, 64, 0.4); padding: 1.5rem; border-radius: var(--radius-lg); background: #fdfafa; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #d64040;"></div>
+                            <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: #d64040;">이미지 중심 구조 = AI가 읽기 어려운 상태</strong>
+                            <p style="color: #8c8c8c; line-height: 1.6; font-size: 0.95rem;">핵심 스펙·정보가 이미지 안에만 존재. GEO 진단도구 기준 37점 — 심각한 문제 수준으로 판정. 텍스트 기반 정보 제공이 필요.</p>
                         </div>
-                        <div class="info-item">
-                            <span class="label">PROJECT</span>
-                            <span class="value">GEO Optimization PoC</span>
+                    </div>
+
+                    <!-- 목표 영역 -->
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-sub); font-weight: 600; margin-bottom: 0.5rem;">
+                            목표 · 무엇을 달성할 것인가
+                            <span style="display: inline-block; margin-left: 0.5rem; padding: 2px 6px; background: #eaf6ed; color: #32a852; border-radius: 4px; font-size: 0.7rem; font-weight: 700; vertical-align: middle;">TO-BE GOAL</span>
+                        </h4>
+
+                        <div style="border: 1px solid var(--color-border); padding: 1.5rem; border-radius: var(--radius-lg); background: #fff; display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem;">1</div>
+                            <div>
+                                <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">크롤러 접근 가능한 인프라 확보</strong>
+                                <p style="color: var(--color-text-sub); line-height: 1.6; font-size: 0.95rem;">robots.txt 정비, sitemap.xml 생성·제출, canonical 정규화로 AI 크롤러가 공식 페이지를 발견할 수 있게 한다.</p>
+                            </div>
+                        </div>
+
+                        <div style="border: 1px solid var(--color-border); padding: 1.5rem; border-radius: var(--radius-lg); background: #fff; display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem;">2</div>
+                            <div>
+                                <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">AI가 읽을 수 있는 텍스트 제공</strong>
+                                <p style="color: var(--color-text-sub); line-height: 1.6; font-size: 0.95rem;">메인/상세페이지에 대표 문장·스펙·FAQ를 텍스트로 제공하여 AI가 공식 출처에서 직접 읽고 인용할 수 있는 상태를 만든다.</p>
+                            </div>
+                        </div>
+
+                        <div style="border: 1px solid var(--color-border); padding: 1.5rem; border-radius: var(--radius-lg); background: #fff; display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem;">3</div>
+                            <div>
+                                <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main);">구조화 데이터로 페이지 의미 명확화</strong>
+                                <p style="color: var(--color-text-sub); line-height: 1.6; font-size: 0.95rem;">Organization / WebSite / Product / FAQPage 스키마로 페이지 의미·브랜드 정보를 AI에게 정확히 전달한다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Slide 2: Project Overview -->
-            <section class="slide" id="slide-2">
-                <div class="content grid-layout">
-                    <header class="section-header">
-                        <span class="section-num">01</span>
-                        <h2>프로젝트 개요 및 성과 요약</h2>
-                    </header>
-                    <div class="summary-cards">
-                        <div class="card glass">
-                            <div class="icon">🎯</div>
-                            <h3>핵심 목표</h3>
-                            <p>AI 모델(ChatGPT, Perplexity 등)의 자사몰 인용률 향상 및 사실 오류(Hallucination) 제거</p>
-                        </div>
-                        <div class="card glass accent">
-                            <div class="icon blue">🚀</div>
-                            <h3>주요 실적</h3>
-                            <p>제품 정보 인용률 <span class="stat">0% → 42%</span> 확대, 공식 URL 인용 점유율 <span class="stat">185%</span> 성장</p>
-                        </div>
-                        <div class="card glass">
-                            <div class="icon">🛠️</div>
-                            <h3>수행 범위</h3>
-                            <p>robots.txt 인프라 개선, 메인·상세페이지 시맨틱 구조화, JSON-LD 적용</p>
-                        </div>
+                <!-- 하단: PoC 범위 풀위드 박스 -->
+                <div style="border: 1px solid #ccdcff; padding: 2rem; border-radius: var(--radius-lg); background: #f5f8ff; display: flex; flex-direction: column; gap: 1.5rem; width: 100%;">
+                    <div>
+                        <strong style="display: block; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-primary);">PoC 범위</strong>
+                        <p style="color: var(--color-text-sub); line-height: 1.6; font-size: 0.95rem; margin-top: 0;">IA 현행 유지. 메인/상세페이지 중심의 테크니컬 GEO 개선에 한정. 콘텐츠 전략·광고는 별도 과제로 분리.</p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span style="background: rgba(60, 118, 241, 0.05); color: var(--color-primary); padding: 0.5rem 1.25rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(60, 118, 241, 0.15);">메인 페이지</span>
+                        <span style="background: rgba(60, 118, 241, 0.05); color: var(--color-primary); padding: 0.5rem 1.25rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(60, 118, 241, 0.15);">블루벤트 ID 상세 페이지</span>
+                        <span style="background: rgba(60, 118, 241, 0.05); color: var(--color-primary); padding: 0.5rem 1.25rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(60, 118, 241, 0.15);">블루벤트 무무 상세 페이지</span>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Slide 3: Achievement 1: Infrastructure -->
-            <section class="slide" id="slide-3">
-                <div class="content side-layout">
-                    <div class="text-content">
-                        <header class="section-header">
-                            <span class="section-num">02</span>
-                            <h2>기술 인프라 및 검색 환경 정상화</h2>
-                        </header>
-                        <div class="feature-item">
-                            <div class="feature-title">AI 크롤러 접근 허용 (robots.txt)</div>
-                            <p>기존 GPTBot, ClaudeBot 등 주요 AI 봇 차단 설정을 해제하여 자사몰 데이터 수집을 공식 허용하였습니다.</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">사이트맵 및 색인 최적화</div>
-                            <p>Sitemap.xml을 고도몰 특성에 맞춰 재생성하고 Search Console을 통해 즉각적인 수집을 유도하였습니다.</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-title">캐노니컬(Canonical) 태그 적용</div>
-                            <p>중복 URL 문제를 해결하여 AI가 공식 대표 페이지를 유일한 출처로 인식하게 개선하였습니다.</p>
-                        </div>
-                    </div>
-                    <div class="visual-content">
-                        <div class="code-box">
-                            <div class="code-header">robots.txt optimization</div>
-                            <pre><code>User-agent: GPTBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
-User-agent: Claude-Web
-Allow: /
-Sitemap: https://bluevent.co.kr/sitemap.xml</code></pre>
-                        </div>
+        <!-- 간지 02 -->
+        <section class="interstitial">
+            <div class="container" data-reveal>
+                <span class="chapter-num">NEXT CHAPTER</span>
+                <h2 class="h1-display">2. As-Is → To-Be 변경사항 요약</h2>
+                <p class="subtitle">크롤링 인프라부터 상세페이지 구조화 포인트 스터디</p>
+            </div>
+        </section>
+
+        <!-- 2. As-Is -> To-Be 내용 -->
+        <section id="changes">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2.5rem; padding-bottom: 1rem;">
+                    <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--color-text-sub); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">KEY MODIFICATIONS</span>
+                        <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">As-Is → To-Be 요약 테이블</h3>
                     </div>
                 </div>
-            </section>
 
-            <!-- Slide 4: Achievement 2: Main Page -->
-            <section class="slide" id="slide-4">
-                <div class="content split-layout">
-                    <div class="half-content">
-                        <header class="section-header">
-                            <span class="section-num">03</span>
-                            <h2>메인 페이지 시맨틱 개편</h2>
-                        </header>
-                        <ul class="check-list">
-                            <li><strong>메타태그 정교화:</strong> 브랜드 고유 키워드 및 AI 요약 최적화 텍스트 반영</li>
-                            <li><strong>JSON-LD (Organization) 적용:</strong> '블루벤트' 브랜드 실체에 대한 구조화된 데이터 제공</li>
-                            <li><strong>H1 태그 위계 교정:</strong> 고객센터 텍스트에서 브랜드 아이덴티티 텍스트로 수정</li>
-                            <li><strong>TL;DR 요약 블록:</strong> AI가 즉각적으로 학습할 수 있는 핵심 요약 텍스트 전면 배치</li>
-                        </ul>
+                <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); background: #fff;">
+                    <table class="report-table" style="margin-top: 0; border: none; box-shadow: none;">
+                        <thead>
+                            <tr>
+                                <th width="18%">구분 (Scope)</th>
+                                <th width="18%">항목 (Item)</th>
+                                <th width="32%">AS-IS (개선 전)</th>
+                                <th width="32%">TO-BE (개선 후)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 도메인 레벨 -->
+                            <tr>
+                                <td rowspan="3" style="background: rgba(60, 118, 241, 0.02); vertical-align: middle; text-align: center; border-right: 1px solid var(--color-border); border-bottom: 2px solid #d0d7e5;">
+                                    <strong style="display: block; font-size: 1.1rem; color: var(--color-primary-dark); margin-bottom: 0.25rem;">🌐 도메인 레벨</strong>
+                                    <span style="font-size: 0.85rem; color: var(--color-text-sub);">(공통 인프라 확보)</span>
+                                </td>
+                                <td class="row-header"><strong>robots.txt</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">차단</span> 주요 AI 크롤러 차단</td>
+                                <td class="to-be-cell"><span class="badge-green">허용</span> AI 및 검색 크롤러 접근 허용 처리</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header"><strong>sitemap.xml</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">누락</span> 부재 또는 미제출 상태</td>
+                                <td class="to-be-cell"><span class="badge-green">생성</span> 사이트맵 생성 및 제출</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header" style="border-bottom: 2px solid #d0d7e5;"><strong>canonical</strong></td>
+                                <td class="as-is-cell" style="border-bottom: 2px solid #d0d7e5;"><span class="badge-red">중복</span> 파라미터 URL 중복 가능성</td>
+                                <td class="to-be-cell" style="border-bottom: 2px solid #d0d7e5;"><span class="badge-green">정규화</span> 대표 URL 기준 정규화 삽입</td>
+                            </tr>
+
+                            <!-- 메인 홈페이지 -->
+                            <tr>
+                                <td rowspan="3" style="background: rgba(60, 118, 241, 0.02); vertical-align: middle; text-align: center; border-right: 1px solid var(--color-border); border-bottom: 2px solid #d0d7e5;">
+                                    <strong style="display: block; font-size: 1.1rem; color: var(--color-primary-dark); margin-bottom: 0.25rem;">🏠 메인 홈페이지</strong>
+                                    <span style="font-size: 0.85rem; color: var(--color-text-sub);">(브랜드 인지/요약 방향)</span>
+                                </td>
+                                <td class="row-header"><strong>Meta / Heading</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">단순</span> 빈 값 또는 헤딩 미정비</td>
+                                <td class="to-be-cell"><span class="badge-green">최적화</span> 브랜드 USP 반영 및 계층화</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header"><strong>TL;DR (요약)</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">부재</span> 이미지 중심 리소스 편달</td>
+                                <td class="to-be-cell"><span class="badge-green">추가</span> 1문장 요약 및 전면 텍스트 배치</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header" style="border-bottom: 2px solid #d0d7e5;"><strong>JSON-LD 적용</strong></td>
+                                <td class="as-is-cell" style="border-bottom: 2px solid #d0d7e5;"><span class="badge-red">미적용</span> 스키마 마크업 부재</td>
+                                <td class="to-be-cell" style="border-bottom: 2px solid #d0d7e5;"><span class="badge-green">적용</span> Organization, WebSite 스키마 확립</td>
+                            </tr>
+
+                            <!-- 제품 상세페이지 -->
+                            <tr>
+                                <td rowspan="3" style="background: rgba(60, 118, 241, 0.02); vertical-align: middle; text-align: center; border-right: 1px solid var(--color-border); border-bottom: none;">
+                                    <strong style="display: block; font-size: 1.1rem; color: var(--color-primary-dark); margin-bottom: 0.25rem;">📦 제품 상세페이지</strong>
+                                    <span style="font-size: 0.85rem; color: var(--color-text-sub);">(스펙 인용/정확도 향상)</span>
+                                </td>
+                                <td class="row-header"><strong>스펙 텍스트화</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">불가</span> 텍스트 복사 불가능한 통 이미지</td>
+                                <td class="to-be-cell"><span class="badge-green">가능</span> HTML 텍스트 표 및 리스트 제공</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header"><strong>이미지 Alt 속성</strong></td>
+                                <td class="as-is-cell"><span class="badge-red">오류</span> 무의미하거나 누락된 Alt 사용</td>
+                                <td class="to-be-cell"><span class="badge-green">개선</span> 섹션별 분할 및 모델/브랜드 규격화</td>
+                            </tr>
+                            <tr>
+                                <td class="row-header" style="border-bottom: none;"><strong>Product Schema</strong></td>
+                                <td class="as-is-cell" style="border-bottom: none;"><span class="badge-red">미적용</span> 제품 구조화 데이터 부재</td>
+                                <td class="to-be-cell" style="border-bottom: none;"><span class="badge-green">적용</span> 가격/모델명 등 Product 스키마 적용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 간지 03 -->
+        <section class="interstitial">
+            <div class="container" data-reveal>
+                <span class="chapter-num">NEXT CHAPTER</span>
+                <h2 class="h1-display">3. 결과 — 전/후 화면 비교</h2>
+                <p class="subtitle">시맨틱 및 데이터 마크업 적용에 따른 실측 결과</p>
+            </div>
+        </section>
+
+        <!-- 3. 결과 및 비교 내용 -->
+        <section id="comparison">
+            <div class="container">
+                <!-- 3-1. KPI -->
+                <!-- 3-1. KPI: Comprehensive GEO Score Dashboard -->
+                <div style="margin-bottom: 6rem;" data-reveal>
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">GEO 적합 점수 — AS-IS vs TO-BE</h3>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #32a852; background: #eaf6ed; padding: 0.4rem 1rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(50,168,82,0.2);">진단도구 기준</span>
                     </div>
-                    <div class="half-content">
-                        <!-- Space for an image/visual -->
-                        <div class="mockup-container">
-                            <div class="mockup-item main-mockup">
-                                <img src="bluevent_geo_mockup_1775026295793.png" alt="Bluevent GEO Optimization Mockup" class="mockup-img">
-                                <div class="mockup-overlay">
-                                    <span class="tag to-be">TO-BE: Optimized View</span>
+
+                    <!-- Dashboard Grid -->
+                    <div style="display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start;">
+                        
+                        <!-- Left Column (Total Score & Improvements) -->
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <!-- Score Card -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                <span style="font-size: 0.95rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem; display: block;">GEO 적합 점수</span>
+                                <div style="display: flex; justify-content: center; align-items: baseline; gap: 0.75rem; margin-bottom: 1.5rem;">
+                                    <span style="font-size: 3.5rem; font-weight: 900; color: #ef4444; line-height: 1;">37</span>
+                                    <span style="font-size: 1.5rem; color: #cbd5e1;">→</span>
+                                    <span style="font-size: 3.5rem; font-weight: 900; color: var(--color-primary); line-height: 1;">86</span>
+                                </div>
+                                
+                                <!-- Gradient Bar -->
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: linear-gradient(to right, #ef4444 0%, #a78bfa 30%, #60a5fa 60%, var(--color-primary) 100%); margin-bottom: 1.5rem; position: relative;">
+                                    <div style="position: absolute; left: 37%; top: -4px; width: 4px; height: 14px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3); border-radius: 2px;"></div>
+                                    <div style="position: absolute; left: 86%; top: -4px; width: 4px; height: 14px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3); border-radius: 2px;"></div>
+                                </div>
+                                
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #64748b; display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <span style="opacity: 0.7;">심각한 문제 수준</span>
+                                    <span style="color: var(--color-text-main);">→ 대체로 효과적</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Slide 5: Achievement 3: Product Detail -->
-            <section class="slide" id="slide-5">
-                <div class="content grid-layout">
-                    <header class="section-header">
-                        <span class="section-num">04</span>
-                        <h2>제품 상세페이지 테크니컬 극복</h2>
-                        <p class="subtitle">블루벤트 ID 중심의 데이터 추출 효율성 극대화</p>
-                    </header>
-                    <div class="process-flow">
-                        <div class="step">
-                            <div class="step-icon">🖼️</div>
-                            <div class="step-text">이미지 분할<br>& Alt 텍스트</div>
-                        </div>
-                        <div class="step-line"></div>
-                        <div class="step">
-                            <div class="step-icon">📜</div>
-                            <div class="step-text">H1~H3<br>시맨틱 헤딩</div>
-                        </div>
-                        <div class="step-line"></div>
-                        <div class="step">
-                            <div class="step-icon">💎</div>
-                            <div class="step-text">JSON-LD<br>Product Schema</div>
-                        </div>
-                        <div class="step-line"></div>
-                        <div class="step">
-                            <div class="step-icon">📋</div>
-                            <div class="step-text">텍스트<br>Spec Table</div>
-                        </div>
-                    </div>
-                    <div class="result-box">
-                        <p><strong>주요 성과:</strong> 이미지로만 구성되어 0%였던 '제품 스펙 질문'에 대한 AI 답변 성공률이 <strong>42%</strong>로 급상승</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 6: Achievement 4: FAQ & Knowledge -->
-            <section class="slide" id="slide-6">
-                <div class="content full-layout">
-                    <header class="section-header">
-                        <span class="section-num">05</span>
-                        <h2>FAQ 및 지식 기반 구조화</h2>
-                    </header>
-                    <div class="faq-grid">
-                        <div class="faq-item">
-                            <div class="q">Q. 필터 교체 주기는?</div>
-                            <div class="a">"블루벤트 앱을 통해 실시간 확인 및 원격 제어가 가능하며 평균 4-6개월 권장." (인용 최적화 텍스트)</div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="q">Q. 뼈나 딱딱한 음식도?</div>
-                            <div class="a">"고강도 합금강 분쇄 날개를 사용하여 일반적인 음식물 쓰레기와 뼈의 완벽한 분해 지원."</div>
-                        </div>
-                    </div>
-                    <div class="schema-badge">
-                        <span>Schema.org FAQPage Applied</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 7: Quantitative Results -->
-            <section class="slide" id="slide-7">
-                <div class="content center-layout">
-                    <header class="section-header center">
-                        <span class="section-num">06</span>
-                        <h2>정량적 성과 분석 (KPI)</h2>
-                    </header>
-                    <div class="kpi-dashboard">
-                        <div class="kpi-card">
-                            <div class="kpi-label">제품 스펙 인용률</div>
-                            <div class="kpi-val highlight">42%</div>
-                            <div class="kpi-diff">+42%p (Target: 30%)</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-label">공식 URL 점유율</div>
-                            <div class="kpi-val highlight">48%</div>
-                            <div class="kpi-diff">+33%p (Target: 40%)</div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-label">사실 오류 건수</div>
-                            <div class="kpi-val warning">-65%</div>
-                            <div class="kpi-diff">추론 기반 오류 대폭 감소</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 8: Future Plan -->
-            <section class="slide" id="slide-8">
-                <div class="content side-layout">
-                    <div class="text-content">
-                        <header class="section-header">
-                            <span class="section-num">07</span>
-                            <h2>향후 모니터링 및 운영 계획</h2>
-                        </header>
-                        <div class="plan-item">
-                            <h3>지속적인 GEO 모니터링</h3>
-                            <p>2주 단위 AI 모델 답변 변화 매트릭스 업데이트 및 변칙 대응</p>
-                        </div>
-                        <div class="plan-item">
-                            <h3>콘텐츠 레이어 확장</h3>
-                            <p>'음식물처리기 추천' 인텐트 확보를 위한 비교·가이드형 페이지 추가 구축</p>
-                        </div>
-                        <div class="plan-item">
-                            <h3>PDCA 사이클 운영</h3>
-                            <p>모델 엔진 업데이트에 따른 테크니컬 마크업 상시 보정</p>
-                        </div>
-                    </div>
-                    <div class="visual-content">
-                        <div class="chart-mockup">
-                            <!-- Placeholder for chart -->
-                            <div class="chart-bar-container">
-                                <div class="bar" style="height: 40%;"></div>
-                                <div class="bar" style="height: 60%;"></div>
-                                <div class="bar highlight" style="height: 90%;"></div>
+                            <!-- Improvement Points List -->
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem;">
+                                <h4 style="font-size: 0.85rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.25rem;">주요 개선 포인트</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--color-text-main); font-weight: 600; display: flex; flex-direction: column; gap: 0.75rem;">
+                                    <li><span style="color: #cbd5e1; margin-right: 0.25rem;">•</span> 크롤링 인프라 정비</li>
+                                    <li><span style="color: #cbd5e1; margin-right: 0.25rem;">•</span> 핵심 텍스트화</li>
+                                    <li><span style="color: #cbd5e1; margin-right: 0.25rem;">•</span> 구조화 데이터 적용</li>
+                                    <li><span style="color: #cbd5e1; margin-right: 0.25rem;">•</span> 메타·헤딩 구조 정비</li>
+                                </ul>
                             </div>
-                            <div class="chart-label">Increasing Visibility</div>
+                        </div>
+
+                        <!-- Right Column (Category Progress Bars) -->
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <!-- Card A -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">A. 콘텐츠 구조 <span style="font-weight: 500; font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem;">(Structure)</span></div>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 800;">
+                                        <span style="color: #ef4444;">10/30</span>
+                                        <span style="color: #cbd5e1;">→</span>
+                                        <span style="color: var(--color-primary);">25/30</span>
+                                        <span style="background: #f1f5f9; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">83%</span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: #f1f5f9; position: relative;">
+                                    <div style="position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; background: var(--color-primary); width: 83%;"></div>
+                                </div>
+                                <div style="font-size: 0.85rem; font-weight: 500; color: #94a3b8;">헤딩(H1~H3), TL;DR 요약 블록, 섹션별 앵커 텍스트 정비</div>
+                            </div>
+
+                            <!-- Card B -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">B. 정보 가치 <span style="font-weight: 500; font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem;">(Information Gain)</span></div>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 800;">
+                                        <span style="color: #ef4444;">7/25</span>
+                                        <span style="color: #cbd5e1;">→</span>
+                                        <span style="color: var(--color-primary);">20/25</span>
+                                        <span style="background: #f1f5f9; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">80%</span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: #f1f5f9; position: relative;">
+                                    <div style="position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; background: var(--color-primary); width: 80%;"></div>
+                                </div>
+                                <div style="font-size: 0.85rem; font-weight: 500; color: #94a3b8;">스펙 텍스트화, 사실형 문장, FAQ 추가로 AI 인용 가능 정보량 확보</div>
+                            </div>
+
+                            <!-- Card C -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">C. 브랜드/신뢰도 <span style="font-weight: 500; font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem;">(Entity Authority)</span></div>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 800;">
+                                        <span style="color: #ef4444;">5/20</span>
+                                        <span style="color: #cbd5e1;">→</span>
+                                        <span style="color: var(--color-primary);">20/20</span>
+                                        <span style="background: #f1f5f9; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">100%</span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: #f1f5f9; position: relative;">
+                                    <div style="position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; background: var(--color-primary); width: 100%;"></div>
+                                </div>
+                                <div style="font-size: 0.85rem; font-weight: 500; color: #94a3b8;">Organization Schema, 브랜드 정의 문장, 공식 정보 텍스트화로 엔티티 권위 확보</div>
+                            </div>
+
+                            <!-- Card D -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">D. 기술적 요소 <span style="font-weight: 500; font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem;">(Technical)</span></div>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 800;">
+                                        <span style="color: #ef4444;">7/15</span>
+                                        <span style="color: #cbd5e1;">→</span>
+                                        <span style="color: var(--color-primary);">13/15</span>
+                                        <span style="background: #f1f5f9; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">87%</span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: #f1f5f9; position: relative;">
+                                    <div style="position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; background: var(--color-primary); width: 87%;"></div>
+                                </div>
+                                <div style="font-size: 0.85rem; font-weight: 500; color: #94a3b8;">Schema(Article, FAQPage) 적용, alt 텍스트 규격화, 내부 링크 정비</div>
+                            </div>
+
+                            <!-- Card E -->
+                            <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">E. 명확성 <span style="font-weight: 500; font-size: 0.85rem; color: #94a3b8; margin-left: 0.25rem;">(Clarity)</span></div>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 800;">
+                                        <span style="color: #ef4444;">8/10</span>
+                                        <span style="color: #cbd5e1;">→</span>
+                                        <span style="color: var(--color-primary);">8/10</span>
+                                        <span style="background: #f1f5f9; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">80%</span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; width: 100%; border-radius: 3px; background: #f1f5f9; position: relative;">
+                                    <div style="position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; background: var(--color-primary); width: 80%;"></div>
+                                </div>
+                                <div style="font-size: 0.85rem; font-weight: 500; color: #94a3b8;">AS-IS에서도 한국어 키워드 명확성은 양호. 유지 수준.</div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Slide 9: Thank You -->
-            <section class="slide" id="slide-9">
-                <div class="content thank-you">
-                    <div class="logo-placeholder">BLUEVENT</div>
-                    <h1>감사합니다.</h1>
-                    <p>본 보고서에 대한 질의나 향후 전략적 제안은 담당자에게 문의 바랍니다.</p>
-                    <div class="footer-contacts">
-                        <span>E-TRIBE Technical Division</span>
-                        <span class="dot">•</span>
-                        <span>2026. 04</span>
+                <!-- 3-2. 메인 홈 -->
+                <div style="margin-bottom: 6rem;" data-reveal>
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">메인 홈페이지</h3>
+                        </div>
+                        <span style="font-size: 0.8rem; color: var(--color-text-sub); border: 1px solid var(--color-border); padding: 0.25rem 0.75rem; border-radius: 1rem; font-weight: 600;">메인 페이지</span>
+                    </div>
+
+                    <div class="comparison-grid">
+                        <div class="comp-col">
+                            <div class="comp-header-red">AS-IS · 개선 전</div>
+                            <div class="comp-box-red" style="padding: 0; height: 480px; border: none; background: transparent; overflow-y: auto; border-radius: 4px; box-shadow: var(--shadow-sm); display: block;">
+                                <img src="images/main_asis.png" alt="AS-IS 메인 홈페이지" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <ul class="list-red">
+                                <li>Title/Description 미최적화 — 브랜드 USP 미반영</li>
+                                <li>H1이 브랜드+핵심 키워드를 포함하지 않음</li>
+                                <li>TL;DR/요약 텍스트 블록 없음</li>
+                                <li>Organization/WebSite/BreadcrumbList 스키마 미적용</li>
+                            </ul>
+                        </div>
+                        <div class="comp-col">
+                            <div class="comp-header-green">TO-BE · 개선 후</div>
+                            <div class="comp-box-green" style="padding: 0; height: 480px; border: none; background: transparent; overflow-y: auto; border-radius: 4px; box-shadow: var(--shadow-sm); display: block;">
+                                <img src="images/main_tobe.png" alt="TO-BE 메인 홈페이지" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <ul class="list-green">
+                                <li>Title/Description 확정·적용 — 브랜드 USP 포함</li>
+                                <li>H1이 브랜드+핵심 키워드를 포함함</li>
+                                <li>요약 영역 및 FAQ 영역 존재</li>
+                                <li>Organization/WebSite/BreadcrumbList 스키마 적용됨</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- Navigation Controls -->
-        <div class="controls">
-            <button id="prev-btn" class="nav-btn prev">&larr;</button>
-            <div id="slide-number" class="slide-number">1 / 9</div>
-            <button id="next-btn" class="nav-btn next">&rarr;</button>
+                <!-- 3-3. 상세 페이지 -->
+                <div data-reveal>
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">제품 상세페이지</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--color-text-sub); border: 1px solid var(--color-border); padding: 0.25rem 0.75rem; border-radius: 1rem; font-weight: 600;">블루벤트 ID</span>
+                            <span style="font-size: 0.8rem; color: var(--color-text-sub); border: 1px solid var(--color-border); padding: 0.25rem 0.75rem; border-radius: 1rem; font-weight: 600;">블루벤트 무무</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-grid">
+                        <div class="comp-col">
+                            <div class="comp-header-red">AS-IS · 개선 전</div>
+                            <div class="comp-box-red" style="padding: 0; height: auto; min-height: 0; border: none; background: transparent; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow-sm); display: block;">
+                                <img src="images/product_asis.png" alt="AS-IS 상세페이지 화면" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <ul class="list-red">
+                                <li>텍스트 표/목록 부재 (텍스트 크롤링 불가)</li>
+                                <li>H1~H3 구조로 ‘기능/스펙/FAQ’ 정보 계층 부재</li>
+                                <li>이미지 alt 누락되거나 무의미하게 작성됨</li>
+                                <li>Product 스키마 미적용</li>
+                            </ul>
+                        </div>
+                        <div class="comp-col">
+                            <div class="comp-header-green">TO-BE · 개선 후</div>
+                            <div class="comp-box-green" style="padding: 0; height: auto; min-height: 0; border: none; background: transparent; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow-sm); display: block;">
+                                <img src="images/product_tobe.png" alt="TO-BE 상세페이지 화면" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <ul class="list-green">
+                                <li>제품 스펙이 텍스트 표/목록으로 명확히 존재함</li>
+                                <li>H1~H3 구조로 ‘기능/스펙/FAQ’ 정보 계층 정비</li>
+                                <li>이미지 alt 규격화 (브랜드/제품/내용 포함)</li>
+                                <li>Product 스키마 적용됨</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 간지: AI 인용률 지표 -->
+        <section class="interstitial">
+            <div class="container" data-reveal>
+                <span class="chapter-num">NEXT CHAPTER</span>
+                <h2 class="h1-display">4. 결과 지표(정량 포함)</h2>
+                <p class="subtitle">AI 모델별 인용률 측정 결과 및 비교</p>
+            </div>
+        </section>
+
+        <section id="citation-results">
+            <div class="container">
+                <!-- 질문 세트 -->
+                <div data-reveal style="padding-top: 5rem; margin-bottom: 8rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">질문 세트</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--color-primary); background: #f0f4ff; padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 600; border: 1px solid rgba(26,115,232,0.2);">총 9개 문항</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <!-- 1 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eef3fc; color: #1a73e8; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">브랜드 인식</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main);">블루벤트는 어떤 회사고, 어떤 제품을 판매하나요?</div>
+                        </div>
+                        <!-- 2 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">카테고리 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main);">가정용 음식물처리기 추천해줘. 분쇄식으로 조용하고 탈취 잘 되는 거 찾고 있어.</div>
+                        </div>
+                        <!-- 3 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">카테고리 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main);">음식물처리기 구매할 때 브랜드별로 어떤 차이가 있나요? 국내 주요 브랜드 비교해줘.</div>
+                        </div>
+                        <!-- 4 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">카테고리 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main);">필터 교체 주기를 앱으로 확인하고 원격 제어할 수 있는 음식물처리기 브랜드는 어디야?</div>
+                        </div>
+                        <!-- 5 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #fef0db; color: #e37400; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">제품 스펙</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main);">블루벤트 ID 음식물처리기 스펙이랑 주요 기능 알려줘.</div>
+                        </div>
+                        <!-- 6 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">제품 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main); flex-grow: 1;">사용, 청소, 관리하기 제일 쉬운 음식물처리기 추천해줘</div>
+                            <span style="background: #fff0f0; color: #ff4040; border: 1px solid rgba(255,64,64,0.2); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; flex-shrink: 0;">신규 추가</span>
+                        </div>
+                        <!-- 7 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">제품 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main); flex-grow: 1;">국내에서 직접 개발해서 믿을만한 음식물처리기 추천해줘</div>
+                            <span style="background: #fff0f0; color: #ff4040; border: 1px solid rgba(255,64,64,0.2); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; flex-shrink: 0;">신규 추가</span>
+                        </div>
+                        <!-- 8 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eef3fc; color: #1a73e8; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">브랜드 인지</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main); flex-grow: 1;">블루벤트 브랜드에 대해 알려줘</div>
+                            <span style="background: #fff0f0; color: #ff4040; border: 1px solid rgba(255,64,64,0.2); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; flex-shrink: 0;">신규 추가</span>
+                        </div>
+                        <!-- 9 -->
+                        <div style="display: flex; align-items: center; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.25rem 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                            <div style="width: 140px; flex-shrink: 0; text-align: center;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; background: #eaf6ed; color: #1e8e3e; font-size: 0.85rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 20px;">제품 추천</span>
+                            </div>
+                            <div style="width: 1px; height: 1.5rem; background: #e5e7eb; margin: 0 1.5rem; flex-shrink: 0;"></div>
+                            <div style="font-size: 1rem; font-weight: 600; color: var(--color-text-main); flex-grow: 1;">음식물 처리기 추천해줘</div>
+                            <span style="background: #fff0f0; color: #ff4040; border: 1px solid rgba(255,64,64,0.2); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; flex-shrink: 0;">신규 추가</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-1. AI Citation Rates -->
+                <div data-reveal style="margin-bottom: 6rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">AI 모델별 인용률 측정 결과 — AS-IS</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; color: var(--color-accent-red); background: #faebeb; padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 600; border: 1px solid rgba(214,64,64,0.2);">2026-03-04 ~ 2026-03-23</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fdfdfd; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 600; color: var(--color-text-sub);">
+                            <span>측정 방법: 4개 AI 모델 × 10개 질문</span>
+                            <div style="display: flex; gap: 1.5rem;">
+                                <span style="color: #32a852; display: flex; align-items: center; gap: 0.4rem;"><span style="display: inline-block; width: 14px; height: 14px; background: #eaf6ed; border: 1px solid rgba(50,168,82,0.3); border-radius: 3px;"></span> O 정확 인용</span>
+                                <span style="color: #f59e0b; display: flex; align-items: center; gap: 0.4rem;"><span style="display: inline-block; width: 14px; height: 14px; background: #fef3c7; border: 1px solid rgba(245,158,11,0.3); border-radius: 3px;"></span> △ 부분 인용</span>
+                                <span style="color: #d64040; display: flex; align-items: center; gap: 0.4rem;"><span style="display: inline-block; width: 14px; height: 14px; background: #faebeb; border: 1px solid rgba(214,64,64,0.3); border-radius: 3px;"></span> X 미인용</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                    .cit-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.9rem; background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); }
+                    .cit-table th { background: #f5f8ff; padding: 1.25rem 1rem; font-weight: 700; color: var(--color-text-main); border-bottom: 2px solid #e0e7ff; font-size: 0.85rem; }
+                    .cit-table td { padding: 1.25rem 0.5rem; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
+                    .cit-table tr:last-child td { border-bottom: none; }
+                    .cit-table .mdl-name { font-weight: 800; text-align: left; padding-left: 2rem; color: var(--color-text-main); font-size: 1rem; }
+                    .pcnt { display: block; font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem; }
+                    .dtl { display: block; font-size: 0.75rem; color: var(--color-text-sub); }
+                    .c-red { color: #d64040; } .c-org { color: #d97706; } .c-grn { color: #32a852; } .c-blu { color: var(--color-primary); }
+                    .bg-red-light { background: rgba(214, 64, 64, 0.04); }
+                    .bg-org-light { background: rgba(217, 119, 6, 0.04); }
+                    .bg-grn-light { background: rgba(50, 168, 82, 0.04); }
+                    </style>
+
+                    <div style="width: 100%; overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+                        <table class="cit-table" style="border: none; border-radius: 0; box-shadow: none; white-space: nowrap;">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left; padding-left:2rem; min-width: 100px;">모델 \ 질문</th>
+                                    <th>Q1 브랜드 인지</th>
+                                    <th>Q2 제품 추천</th>
+                                    <th>Q3 제품 추천</th>
+                                    <th>Q4 제품 추천</th>
+                                    <th>Q5 제품 스펙</th>
+                                    <th>Q6 제품 추천</th>
+                                    <th>Q7 제품 추천</th>
+                                    <th>Q8 브랜드 인지</th>
+                                    <th>Q9 제품 추천</th>
+                                    <th style="color: var(--color-primary);">전체 인용률</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-name">Gemini</td>
+                                    <td class="bg-org-light"><span class="pcnt c-org">29%</span><span class="dtl">O:2 △:3 X:2</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">△:7</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="pcnt c-blu" style="font-size:1.4rem;">6%</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-name">Claude</td>
+                                    <td class="bg-org-light"><span class="pcnt c-org">29%</span><span class="dtl">O:2 X:5</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-grn-light"><span class="pcnt c-grn">57%</span><span class="dtl">O:4 X:3</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">△:4 X:3</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="pcnt c-blu" style="font-size:1.4rem;">17%</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-name">ChatGPT</td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">△:4 X:3</span></td>
+                                    <td class="bg-org-light"><span class="pcnt c-org">14%</span><span class="dtl">O:1 X:6</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-org-light"><span class="pcnt c-org">43%</span><span class="dtl">O:3 X:4</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">△:3 X:4</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="pcnt c-blu" style="font-size:1.4rem;">11%</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-name">Perplexity</td>
+                                    <td class="bg-org-light"><span class="pcnt c-org">29%</span><span class="dtl">O:2 X:5</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">X:7</span></td>
+                                    <td class="bg-grn-light"><span class="pcnt c-grn">57%</span><span class="dtl">O:4 X:3</span></td>
+                                    <td class="bg-red-light"><span class="pcnt c-red">0%</span><span class="dtl">△:1 X:6</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="pcnt c-blu" style="font-size:1.4rem;">17%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="background: #fffbfa; border: 1px solid #ffd1d1; padding: 1.5rem; border-radius: var(--radius-lg); margin-top: 1.5rem; font-size: 0.95rem; color: #a13d3d; line-height: 1.6;">
+                        <strong style="color: #d64040;">주요 관찰:</strong> Q4(앱 원격제어) 항목에서 Claude, Perplexity는 57%, ChatGPT도 43%로 상대적으로 높은 인용률을 보임. 반면 Q3(브랜드 비교)는 전 모델 0% — 비교 콘텐츠 부재가 원인으로 추정. Q5(ID 스펙)는 전 모델 0% — 스펙이 이미지 안에만 존재하는 AS-IS 구조의 직접적 결과.
+                    </div>
+
+                    <!-- TO-BE Section -->
+                    <div style="display: flex; justify-content: space-between; align-items: end; margin-top: 8rem; margin-bottom: 2rem;">
+                        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+
+                            <h3 class="h2-header" style="margin-bottom: 0; font-size: 1.6rem; font-weight: 800; color: var(--color-text-main);">AI 모델별 인용률 비교 — TO-BE 리테스트</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; color: #32a852; background: #eaf6ed; padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 600; border: 1px solid rgba(50,168,82,0.2);">개선 후 재측정</span>
+                        </div>
+                    </div>
+
+
+
+                    <table class="cit-table">
+                        <thead>
+                            <tr>
+                                <th style="width:12%; text-align:left; padding-left:2rem;">모델</th>
+                                <th style="width:18%; color: var(--color-primary);">AS-IS 전체 인용률</th>
+                                <th style="width:18%; color:#32a852;">TO-BE 전체 인용률</th>
+                                <th style="width:12%">증감</th>
+                                <th style="width:40%; text-align: left; padding-left: 1rem;">비고 (주요 개선 포인트 연결)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-name">Gemini</td>
+                                <td><span class="pcnt c-red" style="font-size: 1.4rem;">6%</span></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td style="text-align: left; font-size: 0.9rem; color: var(--color-text-sub); padding-left: 1rem; line-height:1.5;">메인/상세 텍스트화 + 스키마 반영 여부</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-name">Claude</td>
+                                <td><span class="pcnt c-org" style="font-size: 1.4rem;">17%</span></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td style="text-align: left; font-size: 0.9rem; color: var(--color-text-sub); padding-left: 1rem; line-height:1.5;">robots.txt 허용 후 공식몰 인용 증가 여부</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-name">ChatGPT</td>
+                                <td><span class="pcnt c-red" style="font-size: 1.4rem;">11%</span></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td style="text-align: left; font-size: 0.9rem; color: var(--color-text-sub); padding-left: 1rem; line-height:1.5;">robots.txt 허용 + 제품 스펙 텍스트 인용 여부</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-name">Perplexity</td>
+                                <td><span class="pcnt c-org" style="font-size: 1.4rem;">17%</span></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td><div style="border: 2px dashed #b0b0b0; padding: 0.4rem 1rem; border-radius: 30px; display: inline-block; color: #a0a0a0; font-weight: 800; font-size: 0.9rem;">TBD</div></td>
+                                <td style="text-align: left; font-size: 0.9rem; color: var(--color-text-sub); padding-left: 1rem; line-height:1.5;">공식 URL 출처 비율 상승 여부</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p style="font-size: 0.8rem; color: var(--color-text-sub); margin-top: 1.5rem; text-align: left;">※ To-Be 인용률은 개선 적용 후 크롤러 반영 기간(최소 2주) 경과 후 측정. 본 페이지에서는 측정 프레임워크만 확정하며, 실제 수치는 추후 업데이트됩니다.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Back to Top Button -->
+        <div style="padding: 6rem 0; text-align: center; display: flex; justify-content: center;">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="background: #fff; border: 1px solid #e5e7eb; border-radius: 50px; padding: 1.25rem 2.5rem; font-family: var(--font-main); font-weight: 800; font-size: 0.9rem; letter-spacing: 0.1em; color: #082253; cursor: pointer; display: flex; align-items: center; gap: 1rem; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+                BACK TO TOP <span style="font-weight: 400; font-size: 1.1rem;">↑</span>
+            </button>
         </div>
-    </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

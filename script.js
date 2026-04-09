@@ -1,77 +1,86 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const progressBar = document.getElementById('progress-bar');
-    const slideNumber = document.getElementById('slide-number');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    
-    let currentSlideIndex = 0;
-    const totalSlides = slides.length;
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    /**
+     * Scroll Reveal Animation
+     */
+    const handleReveal = () => {
+        const revealPoint = 150;
+        const windowHeight = window.innerHeight;
 
-    function updateSlides() {
-        slides.forEach((slide, index) => {
-            if (index === currentSlideIndex) {
-                slide.classList.add('active');
+        revealElements.forEach(el => {
+            const revealTop = el.getBoundingClientRect().top;
+            if (revealTop < windowHeight - revealPoint) {
+                el.classList.add('active');
             } else {
-                slide.classList.remove('active');
+                // Optionally remove active class if you want repeat animations
+                // el.classList.remove('active');
             }
         });
+    };
 
-        // Update progress bar
-        const progress = ((currentSlideIndex + 1) / totalSlides) * 100;
-        progressBar.style.width = `${progress}%`;
+    // Initialize
+    window.addEventListener('scroll', () => {
+        handleReveal();
+    });
 
-        // Update slide number
-        slideNumber.textContent = `${currentSlideIndex + 1} / ${totalSlides}`;
+    // Run once on load
+    handleReveal();
+    
+    // Initial animation for hero elements
+    setTimeout(() => {
+        const heroElements = document.querySelectorAll('#hero [data-reveal]');
+        heroElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('active');
+            }, index * 200);
+        });
+    }, 100);
 
-        // Update buttons state
-        prevBtn.disabled = currentSlideIndex === 0;
-        nextBtn.disabled = currentSlideIndex === totalSlides - 1;
-        
-        // Dynamic chart animation on Slide 8
-        if (currentSlideIndex === 7) { // 0-indexed slide 8
-            const bars = document.querySelectorAll('.bar');
-            bars.forEach((bar, i) => {
-                const targetHeight = bar.getAttribute('style').match(/height:\s*(\d+)%/)[1];
-                bar.style.height = '0%';
-                setTimeout(() => {
-                    bar.style.height = `${targetHeight}%`;
-                }, 100 * (i + 1));
+    /**
+     * Keyboard Navigation for Presentation-style Sections
+     */
+    const sections = Array.from(document.querySelectorAll('section'));
+    let currentFocusIndex = 0;
+    let isKeyScrolling = false;
+
+    // Determine currently active section if user manually scrolls
+    window.addEventListener('scroll', () => {
+        if (!isKeyScrolling) {
+            let minDistance = Infinity;
+            sections.forEach((sec, index) => {
+                const distance = Math.abs(sec.getBoundingClientRect().top);
+                // The section nearest to the Top of the window is active
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    currentFocusIndex = index;
+                }
             });
-        }
-    }
-
-    function nextSlide() {
-        if (currentSlideIndex < totalSlides - 1) {
-            currentSlideIndex++;
-            updateSlides();
-        }
-    }
-
-    function prevSlide() {
-        if (currentSlideIndex > 0) {
-            currentSlideIndex--;
-            updateSlides();
-        }
-    }
-
-    // Keyboard Navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === ' ') {
-            nextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'PageDown') {
-            nextSlide();
-        } else if (e.key === 'PageUp') {
-            prevSlide();
         }
     });
 
-    // Mouse Navigation
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+    window.addEventListener('keydown', (e) => {
+        const isArrowKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key);
+        
+        if (isArrowKey) {
+            e.preventDefault(); // Prevent standard jerky scroll
+            
+            if (isKeyScrolling) return;
 
-    // Initial load
-    updateSlides();
+            // Calculate next section index
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                currentFocusIndex = Math.min(currentFocusIndex + 1, sections.length - 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                currentFocusIndex = Math.max(currentFocusIndex - 1, 0);
+            }
+
+            // Scroll to the targeted section
+            isKeyScrolling = true;
+            sections[currentFocusIndex].scrollIntoView({ behavior: 'smooth' });
+            
+            // Prevent another keypress from jarring the scroll until animation ends
+            setTimeout(() => {
+                isKeyScrolling = false;
+            }, 600);
+        }
+    });
 });
