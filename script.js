@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => {
             const revealTop = el.getBoundingClientRect().top;
             if (revealTop < windowHeight - revealPoint) {
-                el.classList.add('active');
+                if (!el.classList.contains('active')) {
+                    el.classList.add('active');
+                    
+                    // Trigger progress bars animation
+                    const progressBars = el.querySelectorAll('.progress-bar-fill');
+                    progressBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            bar.style.width = bar.getAttribute('data-width');
+                        }, 400);
+                    });
+                }
             } else {
                 // Optionally remove active class if you want repeat animations
                 // el.classList.remove('active');
