@@ -539,3 +539,39 @@ nav.scrolled {
         padding: 5rem 1rem;
     }
 }
+
+/* Raw Data Button */
+.btn-raw-data {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    text-decoration: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.btn-raw-data:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.btn-raw-data svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+.btn-raw-data:hover svg {
+    color: var(--color-primary);
+    transform: translate(1px, -1px);
+}
